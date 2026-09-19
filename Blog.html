@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Journal — Compass &amp; Ink</title>
+  <meta name="description" content="Every dispatch from the road, filterable by destination." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/compass-mark.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="brand">
+        <img src="assets/images/compass-mark.svg" alt="" />
+        Compass &amp; Ink
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html" aria-current="page">Journal</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="btn btn--primary btn--small">Subscribe</a></li>
+      </ul>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section" style="padding-bottom:0;">
+      <div class="container">
+        <div class="section-head">
+          <h2>The journal</h2>
+          <p>Every post from the road so far. Filter by destination, or just scroll.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container blog-layout">
+
+        <!-- ============ FILTER RAIL ============ -->
+        <aside class="filter-rail" aria-label="Filter posts by category">
+          <h4>Destinations</h4>
+          <ul class="filter-list">
+            <li><button type="button" data-filter="all" aria-pressed="true">All posts</button></li>
+            <li><button type="button" data-filter="mountains" aria-pressed="false">Mountains</button></li>
+            <li><button type="button" data-filter="coast" aria-pressed="false">Coast</button></li>
+            <li><button type="button" data-filter="cities" aria-pressed="false">Cities</button></li>
+            <li><button type="button" data-filter="desert" aria-pressed="false">Desert</button></li>
+            <li><button type="button" data-filter="forest" aria-pressed="false">Forest</button></li>
+            <li><button type="button" data-filter="journeys" aria-pressed="false">Journeys</button></li>
+          </ul>
+          <h4>Get new posts</h4>
+          <p style="font-size:0.9rem; color:var(--text-soft);">A short email whenever a new dispatch goes up.</p>
+          <a href="contact.html" class="btn btn--ghost btn--small" style="margin-top:0.5rem;">Subscribe</a>
+        </aside>
+
+        <!-- ============ POST GRID ============ -->
+        <div class="grid" style="grid-template-columns: repeat(2, 1fr);">
+
+          <article class="post-card" data-category="mountains">
+            <div class="post-card__media"><img src="assets/images/mountains.svg" alt="Layered mountain peaks at sunrise" /></div>
+            <div class="post-card__body">
+              <div class="post-card__meta"><span class="tag">Mountains</span><span class="divider"></span><span>6 min read</span></div>
+              <h3>Three passes, one bad map, and the best soup of the trip</h3>
+              <p>A four-day walk through a valley that isn't on most trekking lists.</p>
+              <a href="post.html" class="post-card__link">Read the story</a>
+            </div>
+          </article>
+
+          <article class="post-card" data-category="coast">
+            <div class="post-card__media"><img src="assets/images/coast.svg" alt="A coastline at sunset" /></div>
+            <div class="post-card__body">
+              <div class="post-card__meta"><span class="tag">Coast</span><span class="divider"></span><span>4 min read</span></div>
+              <h3>The fishing town everyone drives past</h3>
+              <p>No beach clubs, one guesthouse, and the best plate of grilled fish yet.</p>
+              <a href="post.html" class="post-card__link">Read the story</a>
+            </div>
+          </article>
+
+          <article class="post-card" data-category="cities">
+            <div class="post-card__media"><img src="assets/images/city.svg" alt="A city skyline at dusk" /></div>
+            <div class="post-card__body">
+              <div class="post-card__meta"><span class="tag">Cities</span><span class="divider"></span><span>7 min read</span></div>
+              <h3>A week in the old quarter, on a backpacker's budget</h3>
+              <p>What we actually spent, and the neighbourhood we'd go straight back to.</p>
+              <a href="post.html" class="post-card__link">Read the story</a>
+            </div>
+          </article>
+
+          <article class="post-card" data-category="desert">
+            <div class="post-card__media"><img src="assets/images/desert.svg" alt="Desert dunes under a warm sun" /></div>
+            <div class="post-card__body">
+              <div class="post-card__meta"><span class="tag">Desert</span><span class="divider"></span><span>5 min read</span></div>
+              <h3>Sleeping under the dunes, and the sandstorm we didn't plan for</h3>
+              <p>A two-night camel trek, and what to actually pack for the cold desert nights.</p>
+              <a href="post.html" class="post-card__link">Read the story</a>
+            </div>
+          </article>
+
+          <article class="post-card" data-category="forest">
+            <div class="post-card__media"><img src="assets/images/forest.svg" alt="A winding path through layered trees" /></div>
+            <div class="post-card__body">
+              <div class="post-card__meta"><span class="tag">Forest</span><span class="divider"></span><span>5 min read</span></div>
+              <h3>Getting quietly lost on the old pilgrim trail</h3>
+              <p>Three days of moss, waymarkers, and a village that only has one phone line.</p>
+              <a href="post.html" class="post-card__link">Read the story</a>
+            </div>
+          </article>
+
+          <article class="post-card" data-category="journeys">
+            <div class="post-card__media"><img src="assets/images/balloon.svg" alt="A hot air balloon rising over rolling hills" /></div>
+            <div class="post-card__body">
+              <div class="post-card__meta"><span class="tag">Journeys</span><span class="divider"></span><span>3 min read</span></div>
+              <h3>Why we said yes to the 5am balloon launch</h3>
+              <p>A short one, on the mornings that are worth the alarm clock.</p>
+              <a href="post.html" class="post-card__link">Read the story</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <img src="assets/images/compass-mark.svg" alt="" />
+            Compass &amp; Ink
+          </a>
+          <p>A slow-travel journal — routes, real budgets and the odd wrong turn.</p>
+          <div class="social-row">
+            <a href="#" aria-label="Photos"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg></a>
+            <a href="#" aria-label="Notes"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v12H8l-4 4V4z"/></svg></a>
+            <a href="mailto:hello@example.com" aria-label="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Journal</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="blog.html">Mountains</a></li>
+            <li><a href="blog.html">Coast</a></li>
+            <li><a href="blog.html">Cities</a></li>
+            <li><a href="blog.html">Desert</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Stay in the loop</h4>
+          <p style="font-size:0.9rem; margin-bottom:0.8rem;">The next dispatch, straight to your inbox.</p>
+          <a href="contact.html" class="btn btn--ghost btn--small" style="border-color:rgba(241,236,222,0.4); color:var(--paper);">Subscribe</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span data-current-year>2026</span> Compass &amp; Ink. All rights reserved.</span>
+        <span>Template built with plain HTML, CSS &amp; JS.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
