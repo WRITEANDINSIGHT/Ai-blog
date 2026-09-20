@@ -1,82 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wanderlust | Travel Blog</title>
-    <meta name="description" content="Discover the world through our travel guides, tips, and stories.">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TERRA & DRIFT | Minimalist Slow Travel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            main: '#FAF7F2',
+            surface: '#FFFFFF',
+            primary: '#1C232B',
+            secondary: '#56616B',
+            terracotta: '#C26D49',
+            'terracotta-hover': '#A95634',
+            sage: '#5E7A68',
+            border: '#E8E2D7'
+          },
+          fontFamily: {
+            serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
+            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #FAF7F2;
+      color: #1C232B;
+      -webkit-font-smoothing: antialiased;
+    }
+    .img-zoom:hover img {
+      transform: scale(1.05);
+    }
+    .img-zoom img {
+      transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  </style>
 </head>
-<body>
+<body class="min-h-screen flex flex-col font-sans">
 
-    <!-- Navigation -->
-    <header class="navbar">
-        <div class="logo">Wanderlust Blog</div>
-        <nav id="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Destinations</a>
-            <a href="#">Travel Tips</a>
-            <a href="#">About</a>
-        </nav>
-        <button id="mobile-menu-btn" aria-label="Toggle Menu">☰</button>
-    </header>
+  <!-- Navigation -->
+  <nav class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between">
+    <a href="#" class="font-serif text-xl tracking-wide font-semibold text-primary">TERRA & DRIFT</a>
+    <div class="hidden md:flex gap-8 text-sm font-medium text-secondary">
+      <a href="#" class="hover:text-terracotta transition-colors">Journal</a>
+      <a href="#" class="hover:text-terracotta transition-colors">Destinations</a>
+      <a href="#" class="hover:text-terracotta transition-colors">About</a>
+    </div>
+    <a href="#" class="px-5 py-2 rounded-full bg-surface border border-border text-xs font-semibold hover:border-terracotta hover:text-terracotta transition-all shadow-sm">
+      Contact
+    </a>
+  </nav>
 
+  <!-- Main Content -->
+  <main class="flex-1 space-y-16 sm:space-y-24 pb-20">
+    
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Explore the Unseen World</h1>
-            <p>Your ultimate guide to budget travel, hidden gems, and unforgettable adventures.</p>
+    <section class="pt-8 sm:pt-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.18em] bg-[#FAF0EB] text-terracotta border border-terracotta/20">
+          <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+          <span>Field Notes & Mindful Wandering</span>
         </div>
+        <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight text-primary leading-tight">
+          The Art of Wandering <span class="italic text-terracotta">Slowly</span>.
+        </h1>
+        <p class="text-base sm:text-lg text-secondary leading-relaxed max-w-2xl mx-auto">
+          Honest essays, unhurried itineraries, and visual dispatches from the world's most serene trails, hidden alleys, and tranquil sanctuaries.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-3 pt-4">
+          <a href="#" class="px-6 py-3 rounded-full bg-primary text-white text-xs font-semibold tracking-wider hover:bg-terracotta transition-all shadow-sm">
+            Explore All Stories
+          </a>
+          <a href="#" class="px-6 py-3 rounded-full bg-surface text-primary border border-border text-xs font-semibold tracking-wider hover:border-terracotta hover:text-terracotta transition-all shadow-sm flex items-center gap-2">
+            <svg class="w-3.5 h-3.5 text-terracotta" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16.01" y1="10" y2="10"/><line x1="12" x2="12.01" y1="10" y2="10"/><line x1="8" x2="8.01" y1="10" y2="10"/><line x1="16" x2="16.01" y1="14" y2="14"/><line x1="12" x2="12.01" y1="14" y2="14"/><line x1="8" x2="8.01" y1="14" y2="14"/><line x1="16" x2="16.01" y1="18" y2="18"/><line x1="12" x2="12.01" y1="18" y2="18"/><line x1="8" x2="8.01" y1="18" y2="18"/></svg>
+            <span>Budget & Trip Planner</span>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <!-- Main Content Grid -->
-    <div class="container layout-grid">
+    <!-- Curated Guides Grid -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+        <div>
+          <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-sage mb-1">
+            <svg class="w-3.5 h-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            <span>Curated Guides</span>
+          </div>
+          <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-primary">
+            Featured Destinations
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
-        <!-- Blog Posts Area -->
-        <main class="post-feed">
-            <h2>Latest Adventures</h2>
-            
-            <article class="post-card">
-                <div class="post-image" style="background-color: #ddd;"></div>
-                <div class="post-content">
-                    <span class="category">Asia</span>
-                    <h3><a href="#">10 Hidden Gems in Northern Pakistan</a></h3>
-                    <p>Discover breathtaking valleys, crystal clear lakes, and welcoming communities off the beaten path...</p>
-                    <a href="#" class="read-more">Read More →</a>
-                </div>
-            </article>
-
-            <article class="post-card">
-                <div class="post-image" style="background-color: #ccc;"></div>
-                <div class="post-content">
-                    <span class="category">Travel Tips</span>
-                    <h3><a href="#">How to Pack Light for a 2-Week Trip</a></h3>
-                    <p>Master the art of minimalist packing with these essential tips that will save you baggage fees and backaches...</p>
-                    <a href="#" class="read-more">Read More →</a>
-                </div>
-            </article>
-        </main>
-
-        <!-- Sidebar (Good for About Me, Newsletter, or Ad Placements) -->
-        <aside class="sidebar">
-            <div class="widget">
-                <h3>About Me</h3>
-                <p>Hi! I'm a passionate traveler documenting my journeys. Follow along for itineraries and tips.</p>
+        <!-- Card 1: Kyoto -->
+        <div class="group bg-surface rounded-2xl border border-border overflow-hidden flex flex-col hover:shadow-md transition-all">
+          <div class="relative h-56 overflow-hidden img-zoom">
+            <img src="https://images.pexels.com/photos/18848921/pexels-photo-18848921.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Kyoto" class="w-full h-full object-cover"/>
+            <div class="absolute top-3 left-3 flex gap-2">
+              <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-white/90 text-primary backdrop-blur-md">Asia</span>
+              <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-white/90 text-primary backdrop-blur-md flex items-center gap-1">
+                Japan
+              </span>
             </div>
-            
-            <div class="widget ad-space">
-                <h3>Sponsored</h3>
-                <!-- Placeholder for future AdSense or Affiliate banners -->
-                <div class="ad-placeholder">Ad Space (250x250)</div>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="font-serif text-xl font-semibold text-primary group-hover:text-terracotta transition-colors">Kyoto</h3>
+            <p class="text-sm text-secondary mt-1 line-clamp-2">Zen temples, cedar paths, and traditional machiya</p>
+            <div class="mt-4 pt-4 border-t border-border flex items-center justify-between text-xs font-medium text-secondary">
+              <span>Oct – Nov</span>
+              <span class="text-sage font-bold">$110 / day</span>
             </div>
-        </aside>
+          </div>
+        </div>
+
+        <!-- Card 2: Swiss Alps -->
+        <div class="group bg-surface rounded-2xl border border-border overflow-hidden flex flex-col hover:shadow-md transition-all">
+          <div class="relative h-56 overflow-hidden img-zoom">
+            <img src="https://images.pexels.com/photos/32496419/pexels-photo-32496419.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Swiss Alps" class="w-full h-full object-cover"/>
+            <div class="absolute top-3 left-3 flex gap-2">
+              <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-white/90 text-primary backdrop-blur-md">Europe</span>
+              <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-white/90 text-primary backdrop-blur-md flex items-center gap-1">
+                Switzerland
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="font-serif text-xl font-semibold text-primary group-hover:text-terracotta transition-colors">Swiss Alps & Zermatt</h3>
+            <p class="text-sm text-secondary mt-1 line-clamp-2">Glacial lakes reflecting the Matterhorn</p>
+            <div class="mt-4 pt-4 border-t border-border flex items-center justify-between text-xs font-medium text-secondary">
+              <span>Jul – Sep</span>
+              <span class="text-sage font-bold">$190 / day</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Amalfi Coast -->
+        <div class="group bg-surface rounded-2xl border border-border overflow-hidden flex flex-col hover:shadow-md transition-all">
+          <div class="relative h-56 overflow-hidden img-zoom">
+            <img src="https://images.pexels.com/photos/27025484/pexels-photo-27025484.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Amalfi" class="w-full h-full object-cover"/>
+            <div class="absolute top-3 left-3 flex gap-2">
+              <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-white/90 text-primary backdrop-blur-md">Europe</span>
+              <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-white/90 text-primary backdrop-blur-md flex items-center gap-1">
+                Italy
+              </span>
+            </div>
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="font-serif text-xl font-semibold text-primary group-hover:text-terracotta transition-colors">Amalfi Coast</h3>
+            <p class="text-sm text-secondary mt-1 line-clamp-2">Pastel cliffs suspended over the Tyrrhenian Sea</p>
+            <div class="mt-4 pt-4 border-t border-border flex items-center justify-between text-xs font-medium text-secondary">
+              <span>May – Sep</span>
+              <span class="text-sage font-bold">$165 / day</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-surface border-t border-border py-10 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 text-center space-y-4">
+      <h2 class="font-serif text-xl font-semibold text-primary">TERRA & DRIFT</h2>
+      <p class="text-xs text-secondary">Chronicles of the quieter corners of our planet.</p>
+      <div class="text-[10px] text-gray-400 uppercase tracking-widest pt-4">© 2026 Terra & Drift Journal.</div>
     </div>
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; <span id="current-year"></span> Wanderlust Blog. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
